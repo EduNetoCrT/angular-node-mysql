@@ -1,0 +1,28 @@
+<div class="container mt-5">
+
+
+  <div *ngIf='errormsg' class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>{{errormsg}}</strong> .
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+
+  <form [formGroup]="userForm" (ngSubmit)="userSubmit()">
+    <div class="col-lg-6 mt-3">
+      <input type="text"class='form-control' formControlName='fullname' placeholder="Digite seu Nome completo">
+
+      <div class="col-lg-6 mt-3">
+        <input type="text"class='form-control' formControlName='email' placeholder="Digite seu email">
+      </div>
+
+      <div class="col-lg-6 mt-3">
+        <input type="text"class='form-control'formControlName='mobile' placeholder="Digite seu Numero">
+      </div>
+    </div>
+
+    <div class="col-4 mt-2">
+      <button class="btn-primary">enviar </button>
+    </div>
+  </form>
+
+</div>
